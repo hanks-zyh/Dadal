@@ -14,6 +14,7 @@
 		179E72B11C40F459009BE8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179E72AF1C40F459009BE8B8 /* LaunchScreen.storyboard */; };
 		179E72BC1C40F459009BE8B8 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E72BB1C40F459009BE8B8 /* TodoTests.swift */; };
 		179E72C71C40F459009BE8B8 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E72C61C40F459009BE8B8 /* TodoUITests.swift */; };
+		179E72D51C40FBB7009BE8B8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E72D41C40FBB7009BE8B8 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		179E72C21C40F459009BE8B8 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		179E72C61C40F459009BE8B8 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		179E72C81C40F459009BE8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179E72D41C40FBB7009BE8B8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				179E72A61C40F459009BE8B8 /* AppDelegate.swift */,
 				179E72A81C40F459009BE8B8 /* ViewController.swift */,
+				179E72D41C40FBB7009BE8B8 /* TableViewController.swift */,
 				179E72AA1C40F459009BE8B8 /* Main.storyboard */,
 				179E72AD1C40F459009BE8B8 /* Assets.xcassets */,
 				179E72AF1C40F459009BE8B8 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179E72A91C40F459009BE8B8 /* ViewController.swift in Sources */,
+				179E72D51C40FBB7009BE8B8 /* TableViewController.swift in Sources */,
 				179E72A71C40F459009BE8B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
