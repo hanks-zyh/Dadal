@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController,UIAlertViewDelegate {
  
     
     override func viewDidLoad() {
@@ -33,22 +33,30 @@ class TableViewController: UITableViewController {
         switch indexPath.row{
         case 0:
             showAlertView()
-            NSLog("d")
+        case 1:
+            showLoginAlerView()
         default:
-            NSLog("d")
+            let detailViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("detail") as! ViewController
+            detailViewController.rowIndex = indexPath.row
+            self.navigationController?.pushViewController(detailViewController, animated: true)
         }
-
-        let detailViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("detail") as! ViewController
-        detailViewController.rowIndex = indexPath.row
-        self.navigationController?.pushViewController(detailViewController, animated: true)
-        
+   
         
     }
-
+    
+    func showLoginAlerView(){
+        
+        var alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确认")
+        alertView2.alertViewStyle = UIAlertViewStyle.LoginAndPasswordInput
+        alertView2.show()
+    }
   
     func showAlertView(){
-        UIAlertView(title: "确认关闭？", message: "you will 关闭当前窗口。。。", delegate: self, cancelButtonTitle: "取消" ).show()
         
+        var alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "other button", "other1","other2","other3")
+            alertView2.show()
     }
+    
+    
 
 }
