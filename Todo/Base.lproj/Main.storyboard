@@ -135,11 +135,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecm-BT-oxg">
-                                <rect key="frame" x="285" y="259" width="42" height="21"/>
+                                <rect key="frame" x="279" y="116" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-W1-OCI">
+                                <rect key="frame" x="-7" y="221" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ODS-Wp-0v0" id="nMa-W0-gju"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -148,6 +154,7 @@
                     </view>
                     <connections>
                         <outlet property="detailLabel" destination="Ecm-BT-oxg" id="ybD-Kh-sgC"/>
+                        <outlet property="pickerView1" destination="Dzm-W1-OCI" id="lZ8-fi-v0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xq7-SZ-CdL" userLabel="First Responder" sceneMemberID="firstResponder"/>

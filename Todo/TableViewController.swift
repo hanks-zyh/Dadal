@@ -37,12 +37,18 @@ class TableViewController: UITableViewController,UIAlertViewDelegate,UIActionShe
             showLoginAlerView()
         case 2:
             showActionSheet()
+        case 3:
+            showDatePicker()
         default:
             let detailViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("detail") as! ViewController
             detailViewController.rowIndex = indexPath.row
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
    
+        
+    }
+    
+    func showDatePicker(){
         
     }
     
