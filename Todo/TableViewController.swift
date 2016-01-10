@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController,UIAlertViewDelegate {
+class TableViewController: UITableViewController,UIAlertViewDelegate,UIActionSheetDelegate {
  
     
     override func viewDidLoad() {
@@ -35,6 +35,8 @@ class TableViewController: UITableViewController,UIAlertViewDelegate {
             showAlertView()
         case 1:
             showLoginAlerView()
+        case 2:
+            showActionSheet()
         default:
             let detailViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("detail") as! ViewController
             detailViewController.rowIndex = indexPath.row
@@ -44,16 +46,26 @@ class TableViewController: UITableViewController,UIAlertViewDelegate {
         
     }
     
+    func showActionSheet(){
+        let actionSheet = UIActionSheet(title: "title", delegate: self, cancelButtonTitle: "cacel", destructiveButtonTitle: "destructive")
+        
+        actionSheet.showInView(self.view)
+    }
+    
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        UIAlertView(title: "click", message: "Click Message \(buttonIndex)", delegate: nil, cancelButtonTitle: "cancle", otherButtonTitles: "other").show()
+    }
     func showLoginAlerView(){
         
-        var alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确认")
+        let alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确认")
         alertView2.alertViewStyle = UIAlertViewStyle.LoginAndPasswordInput
         alertView2.show()
     }
   
     func showAlertView(){
         
-        var alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "other button", "other1","other2","other3")
+        let alertView2 = UIAlertView(title: "Hello", message: "Hello message", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "other button", "other1","other2","other3")
             alertView2.show()
     }
     
