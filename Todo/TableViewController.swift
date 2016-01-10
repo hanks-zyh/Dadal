@@ -28,6 +28,15 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         NSLog(" click: \(indexPath.row)")
+        
+        
+        switch indexPath.row{
+        case 0:
+            showAlertView()
+            NSLog("d")
+        default:
+            NSLog("d")
+        }
 
         let detailViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("detail") as! ViewController
         detailViewController.rowIndex = indexPath.row
@@ -37,5 +46,9 @@ class TableViewController: UITableViewController {
     }
 
   
+    func showAlertView(){
+        UIAlertView(title: "确认关闭？", message: "you will 关闭当前窗口。。。", delegate: self, cancelButtonTitle: "取消" ).show()
+        
+    }
 
 }
